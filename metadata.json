@@ -1,0 +1,5 @@
+{
+  "name": "AI Career Advisor",
+  "description": "An intelligent career advisor that provides personalized career recommendations and answers your career-related questions using Gemini.",
+  "requestFramePermissions": []
+}

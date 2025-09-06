@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Career Advisor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              'brand-dark': '#121212',
+              'brand-dark-2': '#1A1A1A',
+              'brand-dark-3': '#242424',
+              'brand-yellow': '#FDE047',
+              'brand-gray': '#888888',
+              'brand-light': '#E5E5E5',
+              'brand-light-2': '#FFFFFF',
+              'brand-light-3': '#F3F4F6',
+              'brand-dark-text': '#1F2937',
+              'brand-gray-light': '#6B7280',
+            },
+            borderRadius: {
+              '4xl': '2rem',
+            },
+            animation: {
+              'spin-slow': 'spin 5s linear infinite',
+              'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      .bg-grid {
+        background-color: #F9FAFB;
+        background-image:
+          linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+        background-size: 2rem 2rem;
+      }
+      .dark .bg-grid {
+        background-color: #121212;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      }
+      .text-glow {
+        text-shadow: 0 0 8px theme('colors.brand-yellow / 50%'), 0 0 20px theme('colors.brand-yellow / 30%');
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.17.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-grid">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
